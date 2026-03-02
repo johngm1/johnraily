@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Guardians - Protecting Earth's Life Diversity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ------------------ Green Theme Color Palette ------------------ */
+        :root {
+            --color-forest-green: #004D40; /* Main Color: Deep Forest Green */
+            --color-lime-green: #8BC34A;   /* Accent Color: Bright Grass Green */
+            --color-light-bg: #F1F8E9;     /* Light Background: Pale Mint/Off-White */
+            --color-text-dark: #212121;    /* Dark Text Color */
+            --color-accent-brown: #795548; /* Secondary Accent: Earth Brown */
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-light-bg);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ------------------ Header and Navigation ------------------ */
+        header {
+            background-color: var(--color-forest-green);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--color-lime-green);
+            text-shadow: 1px 1px 0 var(--color-text-dark);
+        }
+
+        .nav-links a {
+            color: var(--color-light-bg);
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 400;
+            transition: color 0.3s, border-bottom 0.3s;
+            padding-bottom: 5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-lime-green);
+            border-bottom: 2px solid var(--color-lime-green);
+        }
+
+        /* ------------------ Hero Section ------------------ */
+        .hero {
+            background-color: var(--color-lime-green);
+            color: var(--color-forest-green);
+            text-align: center;
+            padding: 80px 20px;
+            /* Background pattern for texture */
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)), linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+            background-size: 40px 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 0 var(--color-text-dark);
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Main Image Container Style */
+        .hero-image-container {
+            margin: 40px auto;
+            max-width: 600px;
+            border: 5px solid var(--color-forest-green);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-forest-green);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 8px;
+            font-size: 1.1em;
+            border: 2px solid var(--color-text-dark);
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-accent-brown);
+            transform: translateY(-2px);
+        }
+
+        /* ------------------ Content Sections ------------------ */
+        .section {
+            padding: 60px 0;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: var(--color-forest-green);
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--color-lime-green);
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--color-lime-green);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--color-accent-brown);
+            margin-top: 15px;
+        }
+
+        /* ------------------ Footer ------------------ */
+        footer {
+            background-color: var(--color-forest-green);
+            color: var(--color-light-bg);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        /* ------------------ Responsive Design ------------------ */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            .nav-links a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">🌿 Eco Guardians</div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#importance">Why it Matters</a>
+                <a href="#action">Take Action</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Protecting Diverse Life, Building a Green Future!</h1>
+                <p>Biodiversity is the foundation of Earth's health and human well-being. Join us and speak for every living being on our planet.</p>
+                
+                <div class="hero-image-container">
+                    <img src="https://od.lk/s/NjFfMTIwMDE3Mzk3Xw/image792.png" alt="A green-themed illustration depicting forests, oceans, and diverse creatures.">
+                </div>
+                <a href="#action" class="cta-button">Get Involved Now</a>
+            </div>
+        </section>
+
+        <section class="section" id="importance">
+            <div class="container">
+                <h2>Why is Biodiversity Crucial?</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <span style="font-size: 2em;">💧</span>
+                        <h3>Ecological Balance</h3>
+                        <p>It maintains the health and stability of ecosystems, providing clean water, air, and fertile soil.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span style="font-size: 2em;">💊</span>
+                        <h3>Resource Hub</h3>
+                        <p>Earth's organisms are the natural source of food, medicine, and industrial materials, supporting human life and development.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span style="font-size: 2em;">🌎</span>
+                        <h3>Climate Regulation</h3>
+                        <p>Forest and marine ecosystems absorb large amounts of carbon dioxide, helping to regulate global climate change.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="action" style="background-color: white;">
+            <div class="container">
+                <h2>Conservation Actions You Can Take</h2>
+                <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px;">
+                    Start with small changes today, and become an "Eco Guardian" of the Earth!
+                </p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <span style="font-size: 2em; color: var(--color-lime-green);">♻️</span>
+                        <h3>Green Consumption</h3>
+                        <p>Choose environmentally certified products, reduce single-use plastics, and support sustainable practices.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span style="font-size: 2em; color: var(--color-lime-green);">🌱</span>
+                        <h3>Volunteer Locally</h3>
+                        <p>Participate in local tree planting, wetland cleanup, or wildlife monitoring activities to experience conservation firsthand.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span style="font-size: 2em; color: var(--color-lime-green);">📚</span>
+                        <h3>Spread Awareness</h3>
+                        <p>Educate family and friends about the importance of biodiversity to raise broader conservation awareness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <p>Contact Us: info@ecoguardians.org | &copy; 2025 Eco Guardians. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
